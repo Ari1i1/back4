@@ -27,10 +27,8 @@
                 {
                     <option>@i</option>
                 }
-                <span asp-validation-for="@Model.BirthDay"></span>
             </select>
-            <select asp-for="@Model.BirthMonth" asp-items="@(new SelectList(ViewBag.AllMonths, "Id", "Name"))" class="form-control">
-                <span asp-validation-for="@Model.BirthMonth"></span>
+            <select asp-for="@Model.BirthMonth" asp-items="@(new SelectList(Model.Months, "Id", "Name"))" class="form-control">
                 <option disabled="disabled">Month</option>
             </select>
             <select asp-for="@Model.BirthYear" class="form-control">
@@ -39,7 +37,6 @@
                  {
                      <option>@i</option>
                  }
-                 <span asp-validation-for="@Model.BirthYear"></span>
             </select>
         </div>
     </div>

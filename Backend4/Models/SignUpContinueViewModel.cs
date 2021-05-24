@@ -18,6 +18,6 @@ namespace Backend4.Models
         [Compare("Password")]
         public String ConfirmPassword { get; set; }
         
-        public Boolean isChecked { get; set; }
+        public Boolean IsChecked { get; set; }
     }
 }

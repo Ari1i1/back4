@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Backend4.Models.Controls
+namespace Backend4.Models
 {
     public class Month
     {

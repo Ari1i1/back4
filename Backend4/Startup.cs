@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Backend4
 {
@@ -22,7 +21,6 @@ namespace Backend4
         {
             // Add framework services.
             services.AddMvc();
-            services.AddSingleton<IPasswordResetService, PasswordResetService>();
             services.AddSingleton<ISignUpService, SignUpService>();
         }
 
