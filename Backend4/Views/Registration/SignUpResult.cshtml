@@ -1,0 +1,51 @@
+﻿@model Backend4.Models.SignUpContinueViewModel
+@{
+    ViewBag.Title = "Sign up";
+}
+
+<h2>Sign up result</h2>
+<dl asp-action="SignUpResult" class="dl-horizontal">
+    <dt>First name</dt>
+    <dd>@Model.Name</dd>
+    <dt>Last name</dt>
+    <dd>@Model.Surname</dd>
+    <dt>Birthday</dt>
+    <dd>@for (Int32 i = 0; i < 13; i++)
+        {
+            if (Model.BirthMonth == Model.Months[i].Id)
+            {
+                @Model.Months[i].Name
+                break;
+            }
+        }
+        @Model.BirthDay, @Model.BirthYear</dd>
+    <dt>Gender</dt>
+    <dd>@Model.Gender</dd>
+    <dt>Email</dt>
+    <dd>@Model.Email</dd>
+    <dt>Password</dt>
+    <dd>@Model.Password</dd>
+    <dt>User existed</dt>
+    <dd>
+        
+        @if (Model.isExisting)
+        {
+            @true
+        }
+        else
+        {
+            @false
+        }
+    </dd>
+    <dt>Remembered</dt>
+    <dd>
+        @if (Model.isChecked)
+        {
+            @true
+        }
+        else
+        {
+            @false
+        }
+    </dd>
+</dl>
